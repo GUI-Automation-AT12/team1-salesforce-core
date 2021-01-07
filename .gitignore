@@ -31,3 +31,8 @@ build
 .idea
 
 .allure
+
+bin/
+.classpath
+.project
+.settings/
