@@ -4,6 +4,9 @@ import org.fundacionjala.core.throwables.PropertiesReadingException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+/**
+ * [MR] This class contains tests for TestExecutionProperties main class.
+ */
 public class TestExecutionPropertiesTest {
 
     /**

@@ -1,10 +1,13 @@
 package org.fundacionjala.core.throwables;
 
+/**
+ * [MR] Custom Exception class that is thrown when Properties Files could not be read.
+ */
 public class PropertiesReadingException extends Exception {
     /**
      * Default error message.
      */
-    private static final String MESSAGE = "Exception: error in configuration parameters.";
+    private static final String MESSAGE = "Error when reading file or properties.";
 
     /**
      * Default constructor.

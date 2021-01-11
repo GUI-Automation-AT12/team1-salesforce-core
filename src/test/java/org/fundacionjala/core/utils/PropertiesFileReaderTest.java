@@ -4,7 +4,15 @@ import org.fundacionjala.core.throwables.PropertiesReadingException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+/**
+ * [MR] This class contains tests for PropertiesFileReader main class.
+ */
 public class PropertiesFileReaderTest {
+
+    private static final String CORRECT_FILE = "gradle.properties";
+    private static final String INCORRECT_FILE = "gradle.prop";
+    private static final String CORRECT_PROPERTY = "testBrowser";
+    private static final String INCORRECT_PROPERTY = "badProp";
 
     /**
      * Test PropertiesFileReader correct Instantiation with correct file.
@@ -12,7 +20,6 @@ public class PropertiesFileReaderTest {
      */
     @Test
     public void propertiesFileReaderInstantiationWithCorrectFileTest() throws PropertiesReadingException {
-        final String CORRECT_FILE = "gradle.properties";
         PropertiesFileReader propertiesFileReader = new PropertiesFileReader(CORRECT_FILE);
         Assert.assertNotNull(propertiesFileReader);
     }
@@ -24,7 +31,6 @@ public class PropertiesFileReaderTest {
     @Test(expectedExceptions = PropertiesReadingException.class,
             expectedExceptionsMessageRegExp = "Error when reading properties file: gradle.prop")
     public void propertiesFileReaderInstantiationWithIncorrectFileTest() throws PropertiesReadingException {
-        final String INCORRECT_FILE = "gradle.prop";
         PropertiesFileReader propertiesFileReader = new PropertiesFileReader(INCORRECT_FILE);
     }
 
@@ -34,8 +40,6 @@ public class PropertiesFileReaderTest {
      */
     @Test
     public void gettingCorrectPropertyFromCorrectFileTest() throws PropertiesReadingException {
-        final String CORRECT_FILE = "gradle.properties";
-        final String CORRECT_PROPERTY = "testBrowser";
         PropertiesFileReader propertiesFileReader = new PropertiesFileReader(CORRECT_FILE);
         String actual = propertiesFileReader.getProperty(CORRECT_PROPERTY);
         Assert.assertNotNull(actual);
@@ -48,9 +52,7 @@ public class PropertiesFileReaderTest {
     @Test(expectedExceptions = PropertiesReadingException.class,
             expectedExceptionsMessageRegExp = "Error getting property: badProp")
     public void gettingInCorrectPropertyFromCorrectFileTest() throws PropertiesReadingException {
-        final String CORRECT_FILE = "gradle.properties";
-        final String CORRECT_PROPERTY = "badProp";
         PropertiesFileReader propertiesFileReader = new PropertiesFileReader(CORRECT_FILE);
-        String actual = propertiesFileReader.getProperty(CORRECT_PROPERTY);
+        String actual = propertiesFileReader.getProperty(INCORRECT_PROPERTY);
     }
 }

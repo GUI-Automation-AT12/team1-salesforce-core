@@ -8,6 +8,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * [MR] Class to read Properties from files like gradle.properties or salesforce.properties.
+ */
 public class PropertiesFileReader {
 
     private static final Logger LOGGER = LogManager.getLogger(PropertiesFileReader.class);

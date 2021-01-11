@@ -3,6 +3,9 @@ package org.fundacionjala.core.config;
 import org.fundacionjala.core.throwables.PropertiesReadingException;
 import org.fundacionjala.core.utils.PropertiesFileReader;
 
+/**
+ * [MR] Class in charge to read gradle.properties file and its defined properties.
+ */
 public final class TestExecutionProperties {
 
     private static final String PROPERTIES_FILE_PATH = "gradle.properties";
