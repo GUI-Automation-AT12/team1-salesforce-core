@@ -2,22 +2,37 @@
     {
       "name": "Mozilla Firefox",
       "version": "73.0.1",
-      "implicitWaitingSeconds": "30",
-      "explicitWaitingSeconds": "40",
-      "sleepingTimeMills": "500"
+      "implicitWaitingSeconds": 30,
+      "explicitWaitingSeconds": 40,
+      "sleepingTimeMills": 500,
+      "flags": [
+        "--headless",
+        "--disable-gpu",
+        "--no-sandbox"
+      ]
     },
     {
       "name": "Microsoft Edge",
       "version": "87.0.664.66",
-      "implicitWaitingSeconds": "40",
-      "explicitWaitingSeconds": "50",
-      "sleepingTimeMills": "500"
+      "implicitWaitingSeconds": 40,
+      "explicitWaitingSeconds": 50,
+      "sleepingTimeMills": 500,
+      "flags": [
+        "--headless",
+        "--disable-gpu",
+        "--no-sandbox"
+      ]
     },
     {
       "name": "Google Chrome",
       "version": "87.0.4280.88",
-      "implicitWaitingSeconds": "30",
-      "explicitWaitingSeconds": "40",
-      "sleepingTimeMills": "500"
+      "implicitWaitingSeconds": 30,
+      "explicitWaitingSeconds": 40,
+      "sleepingTimeMills": 500,
+      "flags": [
+        "--headless",
+        "--disable-gpu",
+        "--no-sandbox"
+      ]
     }
 ]

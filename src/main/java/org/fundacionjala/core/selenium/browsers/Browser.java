@@ -1,5 +1,7 @@
 package org.fundacionjala.core.selenium.browsers;
 
+import java.util.List;
+
 /**
  * [MR] Class that store different types of browsers supported by the framework,
  * with their basic configuration data.
@@ -7,9 +9,10 @@ package org.fundacionjala.core.selenium.browsers;
 public class Browser {
     private String name;
     private String version;
-    private String implicitWaitingSeconds;
-    private String explicitWaitingSeconds;
-    private String sleepingTimeMills;
+    private double implicitWaitingSeconds;
+    private double explicitWaitingSeconds;
+    private double sleepingTimeMills;
+    private List<String> flags;
 
     /**
      * Get browser's name.
@@ -31,7 +34,7 @@ public class Browser {
      * Get browser's implicitWaitingSeconds.
      * @return implicitWaitingSeconds
      */
-    public String getImplicitWaitingSeconds() {
+    public double getImplicitWaitingSeconds() {
         return implicitWaitingSeconds;
     }
 
@@ -39,7 +42,7 @@ public class Browser {
      * Get browser's explicitWaitingSeconds.
      * @return explicitWaitingSeconds
      */
-    public String getExplicitWaitingSeconds() {
+    public double getExplicitWaitingSeconds() {
         return explicitWaitingSeconds;
     }
 
@@ -47,7 +50,15 @@ public class Browser {
      * Get browser's sleepingTimeMills.
      * @return sleepingTimeMills
      */
-    public String getSleepingTimeMills() {
+    public double getSleepingTimeMills() {
         return sleepingTimeMills;
+    }
+
+    /**
+     * Get browser's flags.
+     * @return flags list
+     */
+    public List<String> getFlags() {
+        return flags;
     }
 }
