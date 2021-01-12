@@ -3,11 +3,11 @@ package org.fundacionjala.core.constans;
 /**
  * [SL] This class offers constant for the core.
  */
-public final class ConstantsCore {
+public final class BrowserConstants {
     /**
      * Constructor.
      */
-    private ConstantsCore() {
+    private BrowserConstants() {
 
     }
     /** Navigator Constants. **/
