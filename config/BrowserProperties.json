@@ -1,0 +1,21 @@
+{
+  "Google Chrome": {
+    "version": "87.0.4280.88",
+    "implicitWaiting": "50",
+    "explicitWaiting": "60",
+    "sleepingTime": "500",
+    "flags": [
+      "--disable-gpu",
+      "--no-sandbox",
+      "--window-size=1920,1200"
+    ]
+  },
+  "Mozilla Firefox": {
+    "version": "73.0.1",
+    "implicitWaiting": "50",
+    "explicitWaiting": "60",
+    "sleepingTime": "500",
+    "flags": [
+    ]
+  }
+}
