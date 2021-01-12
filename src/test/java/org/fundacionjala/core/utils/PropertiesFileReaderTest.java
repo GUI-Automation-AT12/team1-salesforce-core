@@ -31,7 +31,7 @@ public class PropertiesFileReaderTest {
     @Test(expectedExceptions = PropertiesReadingException.class,
             expectedExceptionsMessageRegExp = "Error when reading properties file: gradle.prop")
     public void propertiesFileReaderInstantiationWithIncorrectFileTest() throws PropertiesReadingException {
-        PropertiesFileReader propertiesFileReader = new PropertiesFileReader(INCORRECT_FILE);
+        new PropertiesFileReader(INCORRECT_FILE);
     }
 
     /**
@@ -53,6 +53,6 @@ public class PropertiesFileReaderTest {
             expectedExceptionsMessageRegExp = "Error getting property: badProp")
     public void gettingInCorrectPropertyFromCorrectFileTest() throws PropertiesReadingException {
         PropertiesFileReader propertiesFileReader = new PropertiesFileReader(CORRECT_FILE);
-        String actual = propertiesFileReader.getProperty(INCORRECT_PROPERTY);
+        propertiesFileReader.getProperty(INCORRECT_PROPERTY);
     }
 }
