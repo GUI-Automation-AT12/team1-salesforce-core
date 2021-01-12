@@ -16,11 +16,4 @@ public final class ConstantsCore {
     public static final String BROWSER_MOZILLA = "Mozilla Firefox";
     public static final String BROWSER_EDGE = "Microsoft Edge";
 
-    /** Browser Properties Constants. **/
-    public static final String BROWSER_VERSION = "version";
-    public static final String BROWSER_IMPLICITWAIT = "implicitWaiting";
-    public static final String BROWSER_EXPLICITWAIT = "explicitWaiting";
-    public static final String BROWSER_SLEEPINGTIME = "sleepingTime";
-    public static final String BROWSER_FLAGS = "flags";
-
 }
