@@ -34,5 +34,17 @@
         "--disable-gpu",
         "--no-sandbox"
       ]
+    },
+    {
+      "name": "Chromium",
+      "version": "87.0.4280.88",
+      "implicitWaitingSeconds": 40,
+      "explicitWaitingSeconds": 50,
+      "sleepingTimeMills": 500,
+      "flags": [
+        "--headless",
+        "--disable-gpu",
+        "--no-sandbox"
+      ]
     }
 ]
