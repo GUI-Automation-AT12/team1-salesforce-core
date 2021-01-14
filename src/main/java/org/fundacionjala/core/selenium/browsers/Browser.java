@@ -9,9 +9,9 @@ import java.util.List;
 public class Browser {
     private String name;
     private String version;
-    private double implicitWaitingSeconds;
-    private double explicitWaitingSeconds;
-    private double sleepingTimeMills;
+    private long implicitWaitingSeconds;
+    private long explicitWaitingSeconds;
+    private long sleepingTimeMills;
     private List<String> flags;
 
     /**
@@ -34,7 +34,7 @@ public class Browser {
      * Get browser's implicitWaitingSeconds.
      * @return implicitWaitingSeconds
      */
-    public double getImplicitWaitingSeconds() {
+    public long getImplicitWaitingSeconds() {
         return implicitWaitingSeconds;
     }
 
@@ -42,7 +42,7 @@ public class Browser {
      * Get browser's explicitWaitingSeconds.
      * @return explicitWaitingSeconds
      */
-    public double getExplicitWaitingSeconds() {
+    public long getExplicitWaitingSeconds() {
         return explicitWaitingSeconds;
     }
 
@@ -50,7 +50,7 @@ public class Browser {
      * Get browser's sleepingTimeMills.
      * @return sleepingTimeMills
      */
-    public double getSleepingTimeMills() {
+    public long getSleepingTimeMills() {
         return sleepingTimeMills;
     }
 
