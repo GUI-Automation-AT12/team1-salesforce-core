@@ -6,7 +6,7 @@ import org.fundacionjala.core.throwables.PropertiesReadingException;
 /**
  * [MR] Class that sets Test Properties defined in the gradle.properties file.
  */
-public class TestPropertiesSetter {
+public final class TestPropertiesSetter {
     private TestPropertiesSetter() {
     }
 

@@ -35,9 +35,9 @@ public final class WebDriverManager {
         Browser browser = BrowserParser.getBrowsersMap().get(browserName);
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().
-                implicitlyWait((long)browser.getImplicitWaitingSeconds(), TimeUnit.SECONDS);
-        webDriverWait = new WebDriverWait(webDriver, (long)browser.getExplicitWaitingSeconds(),
-                (long)browser.getSleepingTimeMills());
+                implicitlyWait((long) browser.getImplicitWaitingSeconds(), TimeUnit.SECONDS);
+        webDriverWait = new WebDriverWait(webDriver, (long) browser.getExplicitWaitingSeconds(),
+                (long) browser.getSleepingTimeMills());
     }
 
     /**
