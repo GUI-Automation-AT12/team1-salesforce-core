@@ -50,4 +50,8 @@ public final class TestExecutionProperties {
     public String getTestBrowser() throws PropertiesReadingException {
         return propertiesFileReader.getProperty("testBrowser");
     }
+
+    public String getScreenShootStore() throws PropertiesReadingException {
+        return propertiesFileReader.getProperty("screenShotStore");
+    }
 }
