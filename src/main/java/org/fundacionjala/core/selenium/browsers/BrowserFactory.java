@@ -1,4 +1,4 @@
-package org.fundacionjala.core.selenium;
+package org.fundacionjala.core.selenium.browsers;
 
 import org.fundacionjala.core.constans.BrowserConstants;
 import org.fundacionjala.core.selenium.browsers.browserClasses.IBrowser;
