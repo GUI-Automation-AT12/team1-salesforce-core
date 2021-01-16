@@ -12,19 +12,15 @@ public final class TestPropertiesSetter {
 
     /**
      * Sets dataproviderthreadcount property.
-     *
-     * @param threadCount defined number for threadCount
      */
-    public static void setDataProviderThreadCountProp(final String threadCount) throws PropertiesReadingException {
+    public static void setDataProviderThreadCountProp() throws PropertiesReadingException {
         System.setProperty("dataproviderthreadcount", TestExecutionProperties.getInstance().getCucumberThreadCount());
     }
 
     /**
      * Sets the Test Browser to run test Scenarios.
-     *
-     * @param browserName name of default browser
      */
-    public static void setTestBrowser(final String browserName) throws PropertiesReadingException {
-        WebDriverManager.setBrowserName(browserName);
+    public static void setTestBrowser() throws PropertiesReadingException {
+        WebDriverManager.setBrowserName(TestExecutionProperties.getInstance().getTestBrowser());
     }
 }
