@@ -22,7 +22,7 @@ public final class BrowserParser {
 
     private static Map<String, Browser> browserMap;
     private static final String JSON_FILE_PATH =
-            "src/main/java/org/fundacionjala/core/selenium/browsers/config/BrowserProperties.json";
+            "../salesforce-core/src/main/java/org/fundacionjala/core/selenium/browsers/config/BrowserProperties.json";
 
     private BrowserParser() {
     }
@@ -30,6 +30,7 @@ public final class BrowserParser {
     private static List<Browser> getBrowsersListFromJson() throws PropertiesReadingException {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
+
             return objectMapper.readValue(
                     new File(JSON_FILE_PATH), new TypeReference<>() { });
         } catch (IOException e) {

@@ -8,9 +8,10 @@ import org.fundacionjala.core.utils.PropertiesFileReader;
  */
 public final class TestExecutionProperties {
 
-    private static final String PROPERTIES_FILE_PATH = "gradle.properties";
+    private static final String PROPERTIES_FILE_NAME = "gradle.properties";
     private static TestExecutionProperties singleInstance;
     private static PropertiesFileReader propertiesFileReader;
+    private static String rootPath = "";
 
     /**
      * If singleInstance was not instanced before it creates a new one, otherwise returns the created.
@@ -24,7 +25,15 @@ public final class TestExecutionProperties {
     }
 
     private TestExecutionProperties() throws PropertiesReadingException {
-        propertiesFileReader = new PropertiesFileReader(PROPERTIES_FILE_PATH);
+        propertiesFileReader = new PropertiesFileReader(rootPath + PROPERTIES_FILE_NAME);
+    }
+
+    /**
+     * Defines the root path from where the properties file should be taken.
+     * @param root
+     */
+    public static void setRootPath(final String root) {
+        rootPath = root;
     }
 
     /**

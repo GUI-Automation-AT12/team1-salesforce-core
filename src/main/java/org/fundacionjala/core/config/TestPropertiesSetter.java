@@ -25,6 +25,6 @@ public final class TestPropertiesSetter {
      * @param browserName name of default browser
      */
     public static void setTestBrowser(final String browserName) throws PropertiesReadingException {
-        WebDriverManager.setBrowserName(TestExecutionProperties.getInstance().getTestBrowser());
+        WebDriverManager.setBrowserName(browserName);
     }
 }
