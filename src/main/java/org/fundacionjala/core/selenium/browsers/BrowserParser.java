@@ -30,7 +30,6 @@ public final class BrowserParser {
     private static List<Browser> getBrowsersListFromJson() throws PropertiesReadingException {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-
             return objectMapper.readValue(
                     new File(JSON_FILE_PATH), new TypeReference<>() { });
         } catch (IOException e) {
