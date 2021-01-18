@@ -177,10 +177,12 @@ public final class GuiInteractioner {
     }
 
     /**
-     * [SL] Change to currently focus the the iframe.
+     * [SL] Change focus to the default content after in this new DOM.
+     * find the iframe and wait to the render and change  to it.
      *
      * @param webElement of the an iframe
      */
+
     public static void frameToBeAvailableAndSwitchToIt(final WebElement webElement) {
         WebDriverManager.getInstance().getWebDriver().switchTo().defaultContent();
         WebDriverManager.getInstance().getWebDriverWait()
