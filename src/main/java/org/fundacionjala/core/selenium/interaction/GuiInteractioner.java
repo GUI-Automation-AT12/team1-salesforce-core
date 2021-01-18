@@ -23,7 +23,7 @@ public final class GuiInteractioner {
      * Clears the previous text in a WebElement and fills a new text into it.
      *
      * @param webElement to set text
-     * @param text text to be set
+     * @param text       text to be set
      */
     public static void setInputText(final WebElement webElement, final String text) {
         WebDriverManager.getInstance().getWebDriverWait().until(ExpectedConditions.visibilityOf(webElement));
@@ -34,7 +34,7 @@ public final class GuiInteractioner {
     /**
      * Provide fillWebElement method to support By objects.
      *
-     * @param by element found to set text
+     * @param by   element found to set text
      * @param text text to be set
      */
     public static void setInputText(final By by, final String text) {
@@ -105,7 +105,7 @@ public final class GuiInteractioner {
      * Searches for an specific option in a list, then clicks it.
      *
      * @param webElementList list of elements
-     * @param selected ,text of the searched element to be clicked
+     * @param selected       ,text of the searched element to be clicked
      */
     public static void clickOptionFromWebElementList(final List<WebElement> webElementList, final String selected) {
         for (WebElement option : webElementList) {
@@ -120,7 +120,7 @@ public final class GuiInteractioner {
      * Searches for an specific option WebElement that contains a text.
      *
      * @param webElementList list of elements
-     * @param text of the searched element
+     * @param text           of the searched element
      * @return WebElement if it can find it, otherwise return null
      */
     public static WebElement searchTextInWebElementList(final List<WebElement> webElementList, final String text) {
@@ -157,7 +157,7 @@ public final class GuiInteractioner {
      * Gets the inner value of a specific attribute of a WebElement.
      *
      * @param webElement to get attribute's value
-     * @param attribute of the WebElement
+     * @param attribute  of the WebElement
      * @return a String with the value of the attribute, otherwise return null
      */
     public static String getAttributeOfWebElement(final WebElement webElement, final String attribute) {
@@ -168,11 +168,41 @@ public final class GuiInteractioner {
     /**
      * Provide getAttributeOfWebElement method to support By objects.
      *
-     * @param by element to get attribute's value
+     * @param by        element to get attribute's value
      * @param attribute of the By element
      * @return a String with the value of the attribute, otherwise return null
      */
     public static String getAttributeOfWebElement(final By by, final String attribute) {
         return getAttributeOfWebElement(findElementBy(by), attribute);
+    }
+
+    /**
+     * [SL] Change to currently focus the the iframe.
+     *
+     * @param webElement of the an iframe
+     */
+    public static void frameToBeAvailableAndSwitchToIt(final WebElement webElement) {
+        WebDriverManager.getInstance().getWebDriver().switchTo().defaultContent();
+        WebDriverManager.getInstance().getWebDriverWait()
+                .until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(webElement));
+    }
+
+    /**
+     * [SL] Gets the value attribute from a WebElement.
+     * @param webElement of the WebElement
+     * @return a String with the value attribute, otherwise return null
+     */
+    public static String getValueOfWebElement(final WebElement webElement) {
+        WebDriverManager.getInstance().getWebDriverWait().until(ExpectedConditions.visibilityOf(webElement));
+        return webElement.getAttribute("value");
+    }
+
+    /**
+     * [SL] Gets the value attribute from a By.
+     * @param by of the by element
+     * @return a String with the value attribute, otherwise return null
+     */
+    public static String getValueOfWebElement(final By by) {
+        return getValueOfWebElement(findElementBy(by));
     }
 }
