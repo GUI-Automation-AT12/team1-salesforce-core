@@ -191,6 +191,7 @@ public final class GuiInteractioner {
 
     /**
      * [SL] Gets the value attribute from a WebElement.
+     *
      * @param webElement of the WebElement
      * @return a String with the value attribute, otherwise return null
      */
@@ -201,10 +202,20 @@ public final class GuiInteractioner {
 
     /**
      * [SL] Gets the value attribute from a By.
+     *
      * @param by of the by element
      * @return a String with the value attribute, otherwise return null
      */
     public static String getValueOfWebElement(final By by) {
         return getValueOfWebElement(findElementBy(by));
+    }
+
+    /**
+     * [SL] Waits an webElement to be visible.
+     *
+     * @param webElement
+     */
+    public static void waitLoadPage(final WebElement webElement) {
+        WebDriverManager.getInstance().getWebDriverWait().until(ExpectedConditions.visibilityOf(webElement));
     }
 }
