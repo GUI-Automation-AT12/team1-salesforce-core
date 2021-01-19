@@ -3,6 +3,7 @@ package org.fundacionjala.core.api.client;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+import java.io.File;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
@@ -79,7 +80,7 @@ public final class RequestManager {
    * @return a response object.
    */
   public static Response patch(final String endpoint, final String patch) {
-    return given().spec(requestSpec).body(patch).when().patch(endpoint);
+    return given().spec(requestSpec).body(new File(patch)).when().patch(endpoint);
   }
 
   /**
