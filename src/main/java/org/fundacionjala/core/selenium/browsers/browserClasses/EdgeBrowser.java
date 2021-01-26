@@ -6,9 +6,7 @@ import org.fundacionjala.core.constans.BrowserConstants;
 import org.fundacionjala.core.selenium.browsers.Browser;
 import org.fundacionjala.core.selenium.browsers.BrowserParser;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 
 import java.util.HashMap;
 
