@@ -2,6 +2,7 @@ package org.fundacionjala.core.selenium.interaction;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -217,5 +218,14 @@ public final class GuiInteractioner {
      */
     public static void waitLoadPage(final WebElement webElement) {
         WebDriverManager.getInstance().getWebDriverWait().until(ExpectedConditions.visibilityOf(webElement));
+    }
+
+    /**
+     * [SL] Sends the key down simulating a scroll.
+     *
+     * @param scroll
+     */
+    public static void pageDown(final By scroll) {
+        WebDriverManager.getInstance().getWebDriver().findElement(scroll).sendKeys(Keys.PAGE_DOWN);
     }
 }
