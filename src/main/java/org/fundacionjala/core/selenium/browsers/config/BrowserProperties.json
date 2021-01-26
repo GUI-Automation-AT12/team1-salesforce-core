@@ -6,7 +6,6 @@
       "explicitWaitingSeconds": 40,
       "sleepingTimeMills": 500,
       "flags": [
-        "--headless",
         "--disable-gpu",
         "--no-sandbox"
       ]
@@ -18,7 +17,6 @@
       "explicitWaitingSeconds": 50,
       "sleepingTimeMills": 500,
       "flags": [
-        "--headless",
         "--disable-gpu",
         "--no-sandbox"
       ]
@@ -30,9 +28,7 @@
       "explicitWaitingSeconds": 40,
       "sleepingTimeMills": 500,
       "flags": [
-        "--headless",
-        "--disable-gpu",
-        "--no-sandbox"
+        "--disable-gpu"
       ]
     },
     {
@@ -42,7 +38,6 @@
       "explicitWaitingSeconds": 50,
       "sleepingTimeMills": 500,
       "flags": [
-        "--headless",
         "--disable-gpu",
         "--no-sandbox"
       ]
