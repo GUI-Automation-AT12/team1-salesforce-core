@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
@@ -227,5 +228,34 @@ public final class GuiInteractioner {
      */
     public static void pageDown(final By scroll) {
         WebDriverManager.getInstance().getWebDriver().findElement(scroll).sendKeys(Keys.PAGE_DOWN);
+    }
+
+    /**
+     * [MR] Sends the key down to go down inside a WebElement.
+     *
+     * @param scroll
+     */
+    public static void goDown(final WebElement scroll) {
+        scroll.sendKeys(Keys.ARROW_DOWN);
+    }
+
+    /**
+     * [MR] Does mouseover to a WebElement.
+     *
+     * @param webElement to mouseover
+     */
+    public static void mouseOverElement(final WebElement webElement) {
+        Actions action = new Actions(WebDriverManager.getInstance().getWebDriver());
+        WebDriverManager.getInstance().getWebDriverWait().until(ExpectedConditions.visibilityOf(webElement));
+        action.moveToElement(webElement).build().perform();
+    }
+
+    /**
+     * [MR] Provide support for By elements to mouseOverElement method.
+     *
+     * @param by to mouseover
+     */
+    public static void mouseOverElement(final By by) {
+        mouseOverElement(findElementBy(by));
     }
 }
